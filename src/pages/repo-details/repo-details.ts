@@ -12,11 +12,13 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'repo-details.html'
 })
 export class RepoDetailsPage {
+  selectedRepo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.selectedRepo = navParams.get('repo');
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RepoDetailsPage');
   }
-
 }
